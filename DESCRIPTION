@@ -1,0 +1,17 @@
+Package: gridprocess
+Type: Package
+Title: Package for processing raster data
+Version: 0.1.0
+Author: Ethan Plunkett
+Maintainer: Ethan Plunkett <ethan@plunkettworks.com>
+Suggests: gridio
+Imports: raster, sp, stats, grDevices, graphics
+Description: This package contains tools for processing raster data, it defines
+    a simple S3 class "grid" for representing raster data; andfunctions for 
+    converting to and from that format, and to process data in "grid" objects. 
+    One unique contribution of the package to R is an algorythm for calculating 
+    resistant kernels.
+License:  MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+OS_type: windows

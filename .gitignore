@@ -1,0 +1,22 @@
+# ignore junk and Junk directories
+[Jj]unk/
+
+# Ignore rstudio files
+Code.Rproj
+.Rproj* 
+.Rproj.user/
+.Rhistory
+.Rproj.user
+*.Rapp.history
+*.Rproj
+
+	
+# Ignore Mac Specific Folder Data 
+.DS_Store
+
+# Ignore edit pad __history folders
+__history/
+
+
+
+
