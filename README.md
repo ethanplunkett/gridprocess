@@ -4,7 +4,7 @@ This package defines a super simple "grid" object whithin which raster data
 is stored as a matrix, it also contains functions for converting between raster,
 and sp objects and grid objects, and functions for processing grid objects. 
 
-This is an offshoot of an older package [gridio]([github](https://github.com/ethanplunkett/rasterPrep)).  giidio contains 
+This is an offshoot of an older package [(gridio)](https://bitbucket.org/eplunkett/gridio/src/master/) which contains 
 functions for  reading and writing to ESRI grids and gradually also 
 accumulated functions that process grids in various ways.  That package relies 
 on an ESRI .dll that is no longer well supported.  It is my intent to migrate
