@@ -1,11 +1,11 @@
 Package: gridprocess
 Type: Package
 Title: Package for processing raster data
-Version: 0.1.0
+Version: 0.1.2
 Author: Ethan Plunkett
 Maintainer: Ethan Plunkett <ethan@plunkettworks.com>
 Suggests: gridio
-Imports: raster, sp, stats, grDevices, graphics
+Imports: raster, sp, stats, grDevices, graphics, utils
 Description: This package contains tools for processing raster data, it defines
     a simple S3 class "grid" for representing raster data; andfunctions for 
     converting to and from that format, and to process data in "grid" objects. 

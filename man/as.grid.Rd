@@ -8,11 +8,11 @@
 \alias{as.grid.RasterStack}
 \alias{raster,grid-method}
 \title{
-Functions to convert to and from grid objects.
+Convert to and from grid objects.
 }
 \description{
-Make grids from objects of type: matrix,  SpatialPointsDataFrame, SpatialPixelsDataFrame, SpatialGridDataFrame, RasterLayer, and RasterStack.
-Defined in packages SP and raster 
+Make grids from objects of type: \code{matrix},  \code{SpatialPointsDataFrame}, \code{SpatialPixelsDataFrame}, \code{SpatialGridDataFrame}, \code{RasterLayer}, and \code{RasterStack}.
+Defined in packages \pkg{sp} and \pkg{raster} 
 }
 \usage{
 as.grid(x, ...)   # generic
@@ -51,22 +51,20 @@ An object of class \code{grid} which is a list containing the following elements
 Ethan Plunkett	
 }
 \note{
-For this function to work on Spatial (SP) objects \code{x} must be comprised of cells on a regular, square grid. 
-However, points in a SpatialPointsDataFrame do not necessarily meet this requirement and 
-cells in \code{SpatialPixelsDataFrame} and \code{SptatialGridDataFrame} classes may not be square in
-which case this function will fail.  
+For this function to work on Spatial (\pkg{sp}) objects \code{x} must be 
+comprised of cells on a regular, square grid. However, points in a 
+SpatialPointsDataFrame do not necessarily meet this requirement and 
+cells in \code{SpatialPixelsDataFrame} and \code{SptatialGridDataFrame} 
+classes may not be square.  
 }
 
 \seealso{
 Input classes of \code{x} are defined in \code{\link{SpatialPointsDataFrame}},
-\code{\link{SpatialPixelsDataFrame}}, and \code{\link{SpatialGridDataFrame}}.
- \code{\link{gridded}} is used internally to convert to \code{\link{SpatialPixelsDataFrame}} and 
- \code{as(x, SpatialGridDataFrame)} to convert to \code{\link{SpatialGridDataFrame}}
- 
- 
+\code{\link{SpatialPixelsDataFrame}}, \code{\link{SpatialGridDataFrame}},
+\code{link[raster]{raster}}, and  \code{link[raster]{brick}}.
 }
-\examples{
 
+\examples{
 # Matrix method
 mat <- matrix(1:20, 4, 5)
 g <- as.grid(mat, cellsize=10, xll=0, yll=0)
@@ -77,17 +75,15 @@ library(sp)
 data(meuse.grid)
 d <- meuse.grid
 coordinates(d) <- c("x", "y")  # this converts meuse.grid to a SpatialPointsDataFrame
-g <- as.grid(d, 3) 
+g <- as.grid(d, 3)
+
 plot(g)
 
-
-\dontrun{
 
 # To and from raster
 library(raster)
 r <- raster(g)
 g2 <- as.grid(r)
-}
 
 }
 

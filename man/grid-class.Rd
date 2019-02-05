@@ -14,7 +14,7 @@ A "grid" is a list containing at least these components:
 \item{m}{a matrix containing the grid data}
 \item{xll, yll}{the x and y coordinates of the lower left corner of the lower left cell}
 \item{nrow, ncol}{the number of rows and columns in the grid}
-\item{cellsize}{the dimensions of the cells in the grid (must be square)}
+\item{cellsize}{the dimensions of the cells in the grid (cells must be square)}
 }
 }
 \keyword{class}

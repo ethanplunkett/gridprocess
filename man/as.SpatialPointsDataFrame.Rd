@@ -2,7 +2,7 @@
 \alias{as.SpatialPointsDataFrame}
 
 \title{
-Function to convert grid objects to SpatialPointsDataFrame objects
+Convert grid objects to SpatialPointsDataFrame objects
 }
 \description{
 This function converts \code{\link{grid}} objects defined in the \pkg{grid} package to objects of class \code{\link{SpatialPointsDataFrame}} defined in \pkg{sp}.
@@ -24,6 +24,10 @@ Ethan Plunkett
 \code{\link{as.grid}}
 }
 \examples{
-#
+
+ g <- as.grid(matrix(1:12, 3, 4, byrow = TRUE), xll = 0, yll = 0, cellsize = 10)
+ spd <-  as.SpatialPointsDataFrame(g)
+ df <- as.data.frame(spd)
+
 }
 \keyword{ spatial }

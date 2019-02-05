@@ -1,8 +1,3 @@
-read.ascii.grid <- function(...){
-  warning("read.ascii.grid is depreciated please use readasciigrid")
-  readasciigrid(...)
-}
-
 readasciigrid <-
 function(path, as.matrix=FALSE){
 # ----------------------------------------------------------------
@@ -13,7 +8,7 @@ function(path, as.matrix=FALSE){
 # ----------------------------------------------------------------
   
   h <- readasciigridheader(path)
-  m <- as.matrix(read.table(path, skip=6))
+  m <- as.matrix(utils::read.table(path, skip=6))
   
   m[m==h$na.value] <- NA
   if(as.matrix == TRUE) return(m)

@@ -33,7 +33,9 @@ Ethan Plunkett
 }
 
 \seealso{
-\code{\link{readasciigrid}}, \code{\link{readasciigridheader}}, \code{\link[gridio]{writegrid}}, \code{\link[gridio]{writeblock}}, \code{\link[gridio]{writetile}} 
+\code{\link{readasciigrid}}, \code{\link{readasciigridheader}}
+\code{\link{as.grid}} for conversion from Raster objects which can be read
+from many formats with \code{\link[raster]{raster}}
 }
 \examples{
 \dontrun{

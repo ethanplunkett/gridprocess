@@ -1,8 +1,3 @@
-write.ascii.grid <- function(...){
-	warning("write.ascii.grid is depreciated. please use writeasciigrid instead")
-	writeasciigrid(...)
-}
-
 writeasciigrid <-
 function(grid, path, na.value=-9999) {
 #----------------------------------------------------------------
