@@ -20,11 +20,10 @@ for NA values and for identifying patches.
 
 This package contains a pre-compiled windows dll (32 and 64 bit) so currently 
 only works on windows. 
-from
+
 Use the code below to install gridprocess
  [github](https://github.com/ethanplunkett/gridprocess).
 ``` r
-# Without vignette:
 devtools::install_github("ethanplunkett/gridprocess")
 
 ```
