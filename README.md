@@ -8,7 +8,7 @@ This is an offshoot of an older package [(gridio)](https://bitbucket.org/eplunke
 functions for  reading and writing to ESRI grids and gradually also 
 accumulated functions that process grids in various ways.  That package relies 
 on an ESRI .dll that is no longer well supported.  It is my intent to migrate
-the functions that do not depend on that dll  to this package.
+the functions that do not depend on that dll to this package.
 
 gridprocess contains a function (spread) for calculating resistant kernels 
 that I don't believe is available for R elsewhere.  It will also eventaully
@@ -24,7 +24,9 @@ from
 Use the code below to install gridprocess
  [github](https://github.com/ethanplunkett/gridprocess).
 ``` r
-# Without vignette:
 devtools::install_github("ethanplunkett/gridprocess")
 
 ```
+
+## Change log
+April 25, 2019   Added non-resistant kernel functions.

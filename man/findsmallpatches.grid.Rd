@@ -1,6 +1,7 @@
 \name{findsmallpatches}
-\alias{findsmallpatches.grid}
 \alias{findsmallpatches}
+\alias{findsmallpatches.grid}
+\alias{findsmallpatches.matrix}
 \title{
 Function to identify cells that are part of small patches in a grid
 }
@@ -8,8 +9,9 @@ Function to identify cells that are part of small patches in a grid
 This function returns a grid of the same extent as x populated with TRUE and FALSE indicating whether each cells is part of a small patch and within one of the targetclasses
 }
 \usage{
-findsmallpatches(x, maxsize,  nr=8, ... )
-\method{findsmallpatches}{grid}(x, maxsize, nr = 8,  targetclasses = NA)
+findsmallpatches(x, maxsize,  nr=8, ...)
+\method{findsmallpatches}{grid}(x, maxsize, nr = 8, ...)
+\method{findsmallpatches}{matrix}(x, maxsize, nr = 8,  targetclasses = NA,...)
 }
 \arguments{
   \item{x}{
@@ -24,6 +26,8 @@ the maximum number of cells a patch can have and be considered small
   \item{targetclasses}{
 a vector indicating classes to process; if set only cells in the target classes will be eligable to be identified as small; if NA all classes are considered.
 }
+
+\item{...}{arguments passed on to other methods}
 }
 
 \value{

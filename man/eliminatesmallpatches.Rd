@@ -39,6 +39,8 @@ considered eligable for elimination
 This value is used internally to replace NA's prior to nibbling.  It is up to 
 the user to make sure a value that doesn't occur in \code{x} is used.
 }
+  \item{...}{passed on to other methods}
+
 }
 \value{
 The function returns a object of the same class and dimensions as \code{x} in 

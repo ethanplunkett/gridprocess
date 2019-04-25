@@ -13,12 +13,12 @@ findsmallpatches <- function (x, maxsize,  nr=8, ... ){
   UseMethod("findsmallpatches")
 }
 
-findsmallpatches.grid <- function(x, maxsize, ... ){
-  x$m <- findsmallpatches(x$m, maxsize = maxsize, ...)
+findsmallpatches.grid <- function(x, maxsize, nr=8, ... ){
+  x$m <- findsmallpatches(x$m, maxsize = maxsize, nr=8, ...)
 }
 
 
-findsmallpatches.matrix <- function(x, maxsize, nr=8,  targetclasses = NA){
+findsmallpatches.matrix <- function(x, maxsize, nr=8,  targetclasses = NA, ...){
   patches <- patchscan(x, nr = nr)$patches
   sizes <- table(patches)
   small.patches <- as.numeric(names(sizes)[sizes <= maxsize])

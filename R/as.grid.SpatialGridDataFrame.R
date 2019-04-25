@@ -10,7 +10,7 @@ function(x, data.col=1, ...){
   yll <- as.numeric(x@grid@cellcentre.offset[2] - 0.5 * cellsize)
   ncol <- as.integer(x@grid@cells.dim[1])
   nrow <- as.integer(x@grid@cells.dim[2])
-  g <- list(m=m, nrow=nrow, ncol=ncol, xll=xll, yll=yll, cellsize=cellsize)
+  g <- list(m=m,  xll=xll, yll=yll, nrow=nrow, ncol=ncol, cellsize=cellsize)
   class(g) <- c("grid", class(g))
   return(g)
 }

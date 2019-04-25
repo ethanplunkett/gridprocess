@@ -10,7 +10,7 @@ as.grid.RasterLayer <- function(x, ...){
   result <- list(m = m, xll =  raster::xmin(x) , yll = raster::ymin(x), 
                  nrow = raster::nrow(x), ncol = raster::ncol(x), 
                  cellsize = raster::xres(x))
-  class(result) <- "grid"
+  class(result) <- c("grid", class(result)) 
   return(result)
 }
 
@@ -29,6 +29,6 @@ as.grid.RasterStack <- function(x, layer, ... ){
   result <- list(m = m, xll =  raster::xmin(x) , yll = raster::ymin(x), 
                  nrow = raster::nrow(x), ncol = raster::ncol(x), 
                  cellsize = raster::xres(x))
-  class(result) <- "grid"
+  class(result) <- c("grid", class(result))
   return(result)
 }
