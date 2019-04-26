@@ -6,7 +6,9 @@
 function to swap values in a matrix or grid with other values
 }
 \description{
-This function returns an object similar to \code{x} in which all occurrances of values in \code{original} have been replaced by the corresponding value in \code{replacement}.
+This function returns an object of the same type and dimension as \code{x} in 
+which all occurrances of values in \code{original} have been replaced by the 
+corresponding value in \code{replacement}.
 }
 \usage{
 swap(x, original, replacement, ...)
@@ -53,13 +55,25 @@ precedence over \code{na.value}.
 
 # Note it is possible to swap numeric values with characters and vice versa:
 # (However, character grids cannot be written to disk!)
-m <- matrix(1:12, 4, 3)
-m2 <- swap(m, 1:12, letters[1:12])
-m3 <- swap(m2, letters[1:12], 13:24)
+m <- matrix(c(1:11, NA), 4, 3)
 
 
 # Values not in original will be replaced with NA. 
 swap(m, 1:6, 11:16)
+
+# Replace non-matching with 1
+swap(m, 1:6, 11:16,  no.match = 1)
+
+# Replace non-maching with 1 and na with 0
+swap(m, 1:6, 11:16,  no.match = 1,  na.value = 0)
+
+# It's typical to work directly with grids
+g <- as.grid(m, xll = 0, yll = 0, cellsize = 10)
+g2 <- swap(g, 1:6, 11:16)
+
+
+
+
 
 }
 \keyword{ spatial }
