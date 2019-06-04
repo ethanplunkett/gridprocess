@@ -1,6 +1,6 @@
 # gridprocess
 
-This package defines a super simple "grid" object whithin which raster data
+This package defines a super simple "grid" object within which raster data
 is stored as a matrix, it also contains functions for converting between raster,
 and sp objects and grid objects, and functions for processing grid objects. 
 
