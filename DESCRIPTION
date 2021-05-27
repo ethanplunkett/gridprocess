@@ -1,7 +1,7 @@
 Package: gridprocess
 Type: Package
 Title: Package for processing raster data
-Version: 0.1.3
+Version: 0.1.4
 Author: Ethan Plunkett
 Maintainer: Ethan Plunkett <ethan@plunkettworks.com>
 Suggests: 

@@ -29,4 +29,5 @@ devtools::install_github("ethanplunkett/gridprocess")
 ```
 
 ## Change log
+May 27, 2019  Updated help
 April 25, 2019   Added non-resistant kernel functions.

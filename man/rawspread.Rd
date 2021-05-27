@@ -16,7 +16,7 @@ rawspread(x, spread.value, row, col, square=FALSE)
   \item{spread.value}{ the initial bank account for the spread, which is depleted based on the resistance of each cell as the spread progresses.}
   \item{row}{ the focal row  of the spread }
   \item{col}{ the focal column of the spread }
-  \item{square}{ if TRUE then the diagonal cells will be considered to be one cell length away from the center and the spread will tend to be square.  The default of FALSE uses a diagonal length of 1.4 cells and spreads tend to be hexagonal.}
+  \item{square}{ if TRUE then the diagonal cells will be considered to be one cell length away from the center and the spread will tend to be square.  The default of FALSE uses a diagonal length of 1.4 cells and spreads tend to be octagonal.}
 
 
 }
@@ -31,7 +31,18 @@ A matrix with the same dimensions as \code{x} the values of which represent the 
 }
 
 \author{
-Ethan Plunkett
+Ethan Plunkett, Brad Compton, and Eduard Ene 
+}
+
+\references{
+Compton, B.W., K. McGarigal, S.A. Cushman, and L.R. Gamble. 2007. A resistant-kernel model
+of connectivity for amphibians that breed in vernal pools. Conservation Biology 21:788-799.
+\doi{10.1111/j.1523-1739.2007.00674.x}
+
+McGarigal, K., B.W. Compton, E.B. Plunkett, W.V. DeLuca, J. Grand, E. Ene, and S.D. Jackson.
+2018. A landscape index of ecological integrity to inform landscape conservation. Landscape
+Ecology 33:1029-1048.  
+\doi{10.1007/s10980-018-0653-9}
 }
 
 \seealso{

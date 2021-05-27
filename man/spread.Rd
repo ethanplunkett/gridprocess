@@ -39,11 +39,22 @@ Arguments to be passed to other methods.
 An object of the same class as \code{x} containing the spread values.
 }
 \author{
-Ethan Plunkett
+Ethan Plunkett, Brad Compton, and Eduard Ene 
+}
+\references{
+Compton, B.W., K. McGarigal, S.A. Cushman, and L.R. Gamble. 2007. A resistant-kernel model
+of connectivity for amphibians that breed in vernal pools. Conservation Biology 21:788-799.
+\doi{10.1111/j.1523-1739.2007.00674.x}
+
+McGarigal, K., B.W. Compton, E.B. Plunkett, W.V. DeLuca, J. Grand, E. Ene, and S.D. Jackson.
+2018. A landscape index of ecological integrity to inform landscape conservation. Landscape
+Ecology 33:1029-1048.  
+\doi{10.1007/s10980-018-0653-9}
 }
 
 \seealso{
 \code{\link{rawspread}} calculates the cost distance and is called by this function.
+\code{\link{x2c}} and \code{\link{y2r}} will convert x and y coordinates to row and column indicies.
 }
 \examples{
 	rs <- matrix(1, nrow=20, ncol=20)
