@@ -60,7 +60,7 @@ This relies on \code{\link{findsmallpatches}},  \code{\link{patchscan}}, and
 }
 \examples{
   set.seed(1)
-  g <- as.grid(matrix(runif(n = 48)> .7, 6, 8), xll = 0, yll = 0, cellsize = 10)
+  g <- asgrid(matrix(runif(n = 48)> .7, 6, 8), xll = 0, yll = 0, cellsize = 10)
   plot(g)
   plot(eliminatesmallpatches(g, 3, nr = 8))
   g$m[1, 1] <- NA

@@ -1,6 +1,6 @@
-as.grid.SpatialPointsDataFrame <-
+asgrid.SpatialPointsDataFrame <-
 function(x, data.col=1, ...){
  sp::gridded(x) <- TRUE
- as.grid(x, data.col=data.col, ...)
+ asgrid(x, data.col=data.col, ...)
 }
 

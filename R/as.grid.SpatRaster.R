@@ -5,11 +5,11 @@ if(FALSE){
   library(terra)
   f <- system.file("ex/elev.tif", package="terra")
   r <- rast(f)
-  as.grid(r)
+  asgrid(r)
 
 }
 
-as.grid.SpatRaster <- function(x, ...){
+asgrid.SpatRaster <- function(x, ...){
     if(!isTRUE(all.equal(terra::xres(x), terra::yres(x))))
       stop("Cells are not square. Cannot convert to grid")
     m <- matrix(terra::values(x), nrow = terra::nrow(x), ncol = terra::ncol(x),

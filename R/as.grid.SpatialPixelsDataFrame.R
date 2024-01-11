@@ -1,6 +1,6 @@
-as.grid.SpatialPixelsDataFrame <-
+asgrid.SpatialPixelsDataFrame <-
 function(x, data.col=1, ...){
   x <- as(x,"SpatialGridDataFrame")
-  as.grid(x, data.col=data.col, ...)
+  asgrid(x, data.col=data.col, ...)
 }
 

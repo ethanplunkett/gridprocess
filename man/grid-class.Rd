@@ -6,7 +6,7 @@
 S3 class for storing raster spatial data
 }
 \description{
-"grid" is an S3 class for storing grid data.
+"grid" is an S3 class for storing raster data.
 }
 \details{
 A "grid" is a list containing at least these components:

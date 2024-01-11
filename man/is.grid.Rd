@@ -21,7 +21,7 @@ TRUE if x is a grid. FALSE otherwise.
 
 
 \examples{
-  g  <- as.grid(matrix(1:4, 2, 2),  xll = 0, yll =0, cellsize = 10)
+  g  <- asgrid(matrix(1:4, 2, 2),  xll = 0, yll =0, cellsize = 10)
   is.grid(g)  # TRUE
   is.grid(matrix(1:4, 2, 2)) # FALSE
 }

@@ -26,7 +26,7 @@ if(FALSE){
   # Read with terra
   r <- terra::rast(dem)
 
-  g <- as.grid(r)
+  g <- asgrid(r)
 
 
   # convert to raster
@@ -34,7 +34,7 @@ if(FALSE){
   plot(r2)
 
   # convert to grid
-  g2 <- as.grid(r)
+  g2 <- asgrid(r)
   plot(g2)
 
 

@@ -21,11 +21,11 @@ Ethan Plunkett
 }
 
 \seealso{
-\code{\link{as.grid}}
+\code{\link{asgrid}}
 }
 \examples{
 
- g <- as.grid(matrix(1:12, 3, 4, byrow = TRUE), xll = 0, yll = 0, cellsize = 10)
+ g <- asgrid(matrix(1:12, 3, 4, byrow = TRUE), xll = 0, yll = 0, cellsize = 10)
  spd <-  as.SpatialPointsDataFrame(g)
  df <- as.data.frame(spd)
 

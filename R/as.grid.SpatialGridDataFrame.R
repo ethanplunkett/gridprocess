@@ -1,8 +1,8 @@
-as.grid.SpatialGridDataFrame <-
+asgrid.SpatialGridDataFrame <-
 function(x, data.col=1, ...){
   m <- t(as.matrix(x[data.col]))
   cellsize <- x@grid@cellsize
-  if(cellsize[1] != cellsize[2]) 
+  if(cellsize[1] != cellsize[2])
     stop("This spatial object doesn't have square cells and cannot be ",
          "converted to a grid.")
   cellsize <- cellsize[1]

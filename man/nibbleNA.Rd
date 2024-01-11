@@ -47,7 +47,7 @@ below a certain size threshold.
 }
 \examples{
   set.seed(1)
-  g <- as.grid(matrix(runif(n = 48)> .7, 6, 8), xll = 0, yll = 0, cellsize = 10)
+  g <- asgrid(matrix(runif(n = 48)> .7, 6, 8), xll = 0, yll = 0, cellsize = 10)
   g$m[2, 2] <- NA
   plot(g)
   plot(nibbleNA(g))

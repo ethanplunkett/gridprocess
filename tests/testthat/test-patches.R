@@ -45,7 +45,7 @@ test_that("Patchscan correctly returns the maximum patch id", {
 })
 
 test_that("Grid method to patchscan returns proper object", {
-  g <- as.grid(m, xll = 0, yll = 0, cellsize = 10)
+  g <- asgrid(m, xll = 0, yll = 0, cellsize = 10)
   res <- patchscan(g)$patches
   expect_true(is.grid(res))
   expected <- g 
@@ -62,7 +62,7 @@ test_that("Nibble picks mode", {
 })
 
 test_that("Grid nibble works", {
-  g <- as.grid(m2, xll = 0, yll = 0, cellsize = 10 )
+  g <- asgrid(m2, xll = 0, yll = 0, cellsize = 10 )
   expect_true(is.grid(g))
   res <- nibbleNA(g)
   expected <- g
@@ -72,11 +72,11 @@ test_that("Grid nibble works", {
 
 
 test_that("Eliminate small patches works", {
-  g <- as.grid(m, xll = 0, yll = 0, cellsize = 10 )
+  g <- asgrid(m, xll = 0, yll = 0, cellsize = 10 )
   expect_true(is.grid(g))
   res <- eliminatesmallpatches(g, maxsize = 2)
   
-  expected <- as.grid(matrix(c(2, 2, 2, 3, 3,
+  expected <- asgrid(matrix(c(2, 2, 2, 3, 3,
                                2, NA, 2, 3, 3,
                                1, 1, 1, 3, 1, 
                                1, 1, 1, 1, 3, 

@@ -1,2 +1,2 @@
-as.grid <- function(x, ...) UseMethod("as.grid")
+asgrid <- function(x, ...) UseMethod("asgrid")
 

@@ -6,10 +6,10 @@ d <- meuse.grid
 coordinates(d) <- c("x", "y")
 
 test_that("Conversion from SpatailPointsDataFrame to grid succeeds", {
-  expect_silent(g <- as.grid(d, data.col = 3))
+  expect_silent(g <- asgrid(d, data.col = 3))
 })
 
-g <- as.grid(d, data.col = 3)
+g <- asgrid(d, data.col = 3)
 
 test_that("Conversion from SpatialPointsDataFrame to grid is consistent with past values", {
   expect_that(g, is_a("grid"))
@@ -44,7 +44,7 @@ test_that("Conversion from grid to SpatailPointsDataFrame works", {
 test_that("Grid to terra::SpatRaster conversion works", {
   expect_silent(r <- rast(g))
   expect_that(r, is_a("SpatRaster"))
-  expect_silent(g2 <- as.grid(r))
+  expect_silent(g2 <- asgrid(r))
   expect_equivalent(g, g2)
   expect_true(is.grid(g2))
   expect_equal(terra::values(r)[1000:1010], t(g$m)[1000:1010])

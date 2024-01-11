@@ -68,7 +68,7 @@ swap(m, 1:6, 11:16,  no.match = 1)
 swap(m, 1:6, 11:16,  no.match = 1,  na.value = 0)
 
 # It's typical to work directly with grids
-g <- as.grid(m, xll = 0, yll = 0, cellsize = 10)
+g <- asgrid(m, xll = 0, yll = 0, cellsize = 10)
 g2 <- swap(g, 1:6, 11:16)
 
 

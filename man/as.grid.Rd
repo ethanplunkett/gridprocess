@@ -1,10 +1,10 @@
-\name{as.grid and rast()}
-\alias{as.grid}
-\alias{as.grid.SpatRaster}
-\alias{as.grid.SpatialPointsDataFrame}
-\alias{as.grid.SpatialPixelsDataFrame}
-\alias{as.grid.SpatialGridDataFrame}
-\alias{as.grid.matrix}
+\name{asgrid and rast()}
+\alias{asgrid}
+\alias{asgrid.SpatRaster}
+\alias{asgrid.SpatialPointsDataFrame}
+\alias{asgrid.SpatialPixelsDataFrame}
+\alias{asgrid.SpatialGridDataFrame}
+\alias{asgrid.matrix}
 \alias{rast,grid-method}
 \title{
 Convert to and from grid objects.
@@ -15,12 +15,12 @@ Make grids from objects of type: \code{matrix},  \code{SpatialPointsDataFrame}, 
 Defined in packages \pkg{sp} and \pkg{terra}
 }
 \usage{
-as.grid(x, ...)   # generic
-\method{as.grid}{matrix}(x, xll, yll, cellsize, ...)
-\method{as.grid}{SpatialPointsDataFrame}(x, data.col = 1, ...)
-\method{as.grid}{SpatialPixelsDataFrame}(x, data.col = 1, ...)
-\method{as.grid}{SpatialGridDataFrame}(x, data.col = 1, ...)
-\method{as.grid}{SpatRaster}(x, ...)
+asgrid(x, ...)   # generic
+\method{asgrid}{matrix}(x, xll, yll, cellsize, ...)
+\method{asgrid}{SpatialPointsDataFrame}(x, data.col = 1, ...)
+\method{asgrid}{SpatialPixelsDataFrame}(x, data.col = 1, ...)
+\method{asgrid}{SpatialGridDataFrame}(x, data.col = 1, ...)
+\method{asgrid}{SpatRaster}(x, ...)
 \S4method{rast}{grid}(x)
 
 
@@ -74,7 +74,7 @@ Input classes of \code{x} are defined in \code{\link{SpatialPointsDataFrame}},
 \examples{
 # Matrix method
 mat <- matrix(1:20, 4, 5)
-g <- as.grid(mat, cellsize=10, xll=0, yll=0)
+g <- asgrid(mat, cellsize=10, xll=0, yll=0)
 g
 
 # SpatialPointsDataFrame
@@ -82,7 +82,7 @@ library(sp)
 data(meuse.grid)
 d <- meuse.grid
 coordinates(d) <- c("x", "y")  # this converts meuse.grid to a SpatialPointsDataFrame
-g <- as.grid(d, 3)
+g <- asgrid(d, 3)
 
 plot(g)
 
@@ -90,7 +90,7 @@ plot(g)
 # To and from SpatRaster (terra::rast())
 library(terra)
 r <- rast(g)
-g2 <- as.grid(r)
+g2 <- asgrid(r)
 
 }
 

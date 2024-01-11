@@ -110,7 +110,7 @@ library(sp)
 data(meuse.grid)
 d <- meuse.grid
 coordinates(d) <- c("x", "y")
-g <- as.grid(d, 3)
+g <- asgrid(d, 3)
 
 # Plot
 plot(g)
