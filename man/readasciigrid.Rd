@@ -16,9 +16,6 @@ The path to a ASCII grid on disk. Relative paths are interpreted relative to the
   \item{as.matrix}{
 if \code{as.matrix} is set to \code{TRUE} the return value will be a simple matrix (not a \code{grid}).
 }
-  \item{...}{
-Arguments passed onto readasciigrid.   
-  }
 }
 \value{
 An object of class \code{\link{grid}}

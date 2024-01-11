@@ -1,19 +1,18 @@
 # gridprocess
 
 This package defines a super simple "grid" object within which raster data
-is stored as a matrix, it also contains functions for converting between raster,
-and sp objects and grid objects, and functions for processing grid objects. 
+is stored as a matrix.  It contains functions for converting between 
+SpatRaster (see `terra::rast`) and grid objects.
 
-This is an offshoot of an older package [(gridio)](https://bitbucket.org/eplunkett/gridio/src/main/) which contains 
+This is an offshoot of an older package 
+[(gridio)](https://bitbucket.org/eplunkett/gridio/src/main/) which contains 
 functions for  reading and writing to ESRI grids and gradually also 
 accumulated functions that process grids in various ways.  That package relies 
-on an ESRI .dll that is no longer well supported.  It is my intent to migrate
-the functions that do not depend on that dll to this package.
+handles reading and writing in parallel but has a complex set of dependencies
+that makes it non-portable.  
 
 gridprocess contains a function (spread) for calculating resistant kernels 
-that I don't believe is available for R elsewhere.  It will also eventaully
-contain functions for non-resistant kernels that include correction 
-for NA values and for identifying patches.
+that I don't believe is available for R elsewhere.
 
 
 ## Installation
@@ -27,7 +26,3 @@ Use the code below to install gridprocess
 devtools::install_github("ethanplunkett/gridprocess")
 
 ```
-
-## Change log
-May 27, 2019  Updated help
-April 25, 2019   Added non-resistant kernel functions.

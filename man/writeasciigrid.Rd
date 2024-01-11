@@ -21,9 +21,6 @@ The path and file name to write to.
   \item{na.value}{
 The value to use to represent \code{NA} values on disk.
 }
-\item{...}{
-Arguments will be passed onto writeasciigrid which you should use instead
-}
 }
 \value{
 Nothing is returned.

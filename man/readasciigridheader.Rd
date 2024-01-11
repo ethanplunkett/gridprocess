@@ -14,9 +14,6 @@ readasciigridheader(path)
   \item{path}{
 the path of an ASCII grid on disk
 }
-  \item{...}{
-Arguments passed onto readasciigrid.   
-  }
 }
 \value{
 A list of the header information in the ASCII grid which explains the location and extent of the grid

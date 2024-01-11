@@ -1,20 +1,22 @@
 Package: gridprocess
 Type: Package
 Title: Package for processing raster data
-Version: 0.1.4
+Version: 0.1.5
 Author: Ethan Plunkett
 Maintainer: Ethan Plunkett <ethan@plunkettworks.com>
 Suggests: 
-    gridio,
-    testthat 
-Imports: raster, 
+    gridio2,
+    knitr,
+    rmarkdown,
+    testthat
+Imports: 
+    terra, 
     sp,
     stats,
     grDevices,
     graphics,
     utils,
-    methods,
-    Rcpp (>= 1.0.1)
+    methods
 Description: This package contains tools for processing raster data, it defines
     a simple S3 class "grid" for representing raster data; andfunctions for 
     converting to and from that format, and to process data in "grid" objects. 
@@ -24,4 +26,6 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 OS_type: windows
-LinkingTo: Rcpp
+Depends: 
+    R (>= 2.10)
+VignetteBuilder: knitr
