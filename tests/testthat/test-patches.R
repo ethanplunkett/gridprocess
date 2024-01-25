@@ -2,24 +2,24 @@ context("Patch scan and derived functions")
 
 
 
-m <- matrix(c(2, 2, 4, 4, 2, 
+m <- matrix(c(2, 2, 4, 4, 2,
               4, NA, 2, 3, 2,
               2, 4, 1, 3, 1,
-              1, 1, 1, 1, 3, 
-              4, 4, 4, 2, 2), 
-            5, 5, byrow = TRUE) 
+              1, 1, 1, 1, 3,
+              4, 4, 4, 2, 2),
+            5, 5, byrow = TRUE)
 
-p4 <- matrix(c(0, 0, 1, 1, 2, 
+p4 <- matrix(c(0, 0, 1, 1, 2,
                3, NA, 4, 5, 2,
-               6, 7, 8, 5, 9, 
-               8, 8, 8, 8, 10, 
+               6, 7, 8, 5, 9,
+               8, 8, 8, 8, 10,
                11, 11, 11, 12, 12),
              5, 5, byrow = TRUE)
 
 p8 <- matrix( c(0, 0, 1, 1, 2,
                 3, NA, 0, 4, 2,
-                5, 3, 6, 4, 6, 
-                6, 6, 6, 6, 4, 
+                5, 3, 6, 4, 6,
+                6, 6, 6, 6, 4,
                 7, 7, 7, 8, 8), 5, 5, byrow = TRUE)
 
 
@@ -48,7 +48,7 @@ test_that("Grid method to patchscan returns proper object", {
   g <- asgrid(m, xll = 0, yll = 0, cellsize = 10)
   res <- patchscan(g)$patches
   expect_true(is.grid(res))
-  expected <- g 
+  expected <- g
   expected$m <- p8
   expect_equal(expected, res)
 })
@@ -75,16 +75,16 @@ test_that("Eliminate small patches works", {
   g <- asgrid(m, xll = 0, yll = 0, cellsize = 10 )
   expect_true(is.grid(g))
   res <- eliminatesmallpatches(g, maxsize = 2)
-  
+
   expected <- asgrid(matrix(c(2, 2, 2, 3, 3,
                                2, NA, 2, 3, 3,
-                               1, 1, 1, 3, 1, 
-                               1, 1, 1, 1, 3, 
+                               1, 1, 1, 3, 1,
+                               1, 1, 1, 1, 3,
                                 4, 4, 4, 1, 3),
                              5, 5, byrow  = TRUE),
                       xll = 0, yll = 0, cellsize = 10)
   expect_equal(res, expected)
-  
+
 })
 
 
